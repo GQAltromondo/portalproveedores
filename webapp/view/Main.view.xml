@@ -1,0 +1,25 @@
+<mvc:View controllerName="sacde.PortalProveedores.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+ <App id="app">
+    <Page id="page" class="loginBackground" showNavButton="false">
+      <content>
+        <HBox width="100%" justifyContent="Center" alignItems="Center" height="100%">
+          <HBox width="80%" justifyContent="SpaceBetween" alignItems="Center">
+            <!-- Left section: Portal de Proveedores -->
+            <VBox width="45%" alignItems="Start" justifyContent="Center">
+              <Title text="PORTAL DE PROVEEDORES" level="H1" class="text-white"/>
+              <Button text="Acceder al Portal" type="Emphasized" press="onGoToTiles" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+            <!-- Right section: Registro de Proveedores -->
+            <VBox width="45%" alignItems="Start" justifyContent="Center">
+              <Title text="REGISTRACIÓN DE PROVEEDORES" level="H1" class="text-white"/>
+              <Button text="Ir a Registrarse" type="Emphasized" press="onGoToRegister" class="sapUiSmallMarginTop"/>
+            </VBox>
+          </HBox>
+        </HBox>
+      </content>
+    </Page>
+  </App>
+	</Shell>
+</mvc:View>
