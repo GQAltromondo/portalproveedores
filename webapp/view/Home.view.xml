@@ -1,7 +1,6 @@
 <mvc:View controllerName="sacde.PortalProveedores.controller.Home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Page class="loginBackground" showNavButton="false" enableScrolling="false">
-		<content>
-			<VBox width="100%" height="100%" justifyContent="Center" alignItems="Center">
+
+			<VBox width="100%" height="100%" justifyContent="Center" alignItems="Center"  class="loginBackground">
 				<!-- Logo Section -->
 				<VBox alignItems="Center" justifyContent="Center" class="sapUiLargeMarginBottom">
 					<Image src="img/logosacde.png" width="150px"/>
@@ -24,6 +23,5 @@
 					</VBox>
 				</HBox>
 			</VBox>
-		</content>
-	</Page>
+
 </mvc:View>
