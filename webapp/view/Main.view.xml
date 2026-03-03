@@ -1,20 +1,22 @@
 <mvc:View controllerName="sacde.PortalProveedores.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<Shell id="shell">
  <App id="app">
-    <Page id="page" class="loginBackground" showNavButton="false">
+    <Page id="page" class="loginBackground" showNavButton="false" enableScrolling="false">
       <content>
         <HBox width="100%" justifyContent="Center" alignItems="Center" height="100%">
           <HBox width="80%" justifyContent="SpaceBetween" alignItems="Center">
             <!-- Left section: Portal de Proveedores -->
             <VBox width="45%" alignItems="Start" justifyContent="Center">
-              <Title text="PORTAL DE PROVEEDORES" level="H1" class="text-white"/>
-              <Button text="Acceder al Portal" type="Emphasized" press="onGoToTiles" class="sapUiSmallMarginTop"/>
+              <Title text="PORTAL DE PROVEEDORES" level="H1" class="text-white" width="100%"/>
+              <Text text="Accede a tu cuenta de proveedor para gestionar tus productos y servicios" class="text-white sapUiSmallMarginTop" width="100%"/>
+              <Button text="Acceder al Portal" type="Emphasized" press="onGoToTiles" class="sapUiSmallMarginTop sapMBtn-emphasis"/>
             </VBox>
 
             <!-- Right section: Registro de Proveedores -->
             <VBox width="45%" alignItems="Start" justifyContent="Center">
-              <Title text="REGISTRACIÓN DE PROVEEDORES" level="H1" class="text-white"/>
-              <Button text="Ir a Registrarse" type="Emphasized" press="onGoToRegister" class="sapUiSmallMarginTop"/>
+              <Title text="REGISTRACIÓN DE PROVEEDORES" level="H1" class="text-white" width="100%"/>
+              <Text text="¿Eres nuevo? Registrate como proveedor y comienza a colaborar" class="text-white sapUiSmallMarginTop" width="100%"/>
+              <Button text="Ir a Registrarse" type="Emphasized" press="onGoToRegister" class="sapUiSmallMarginTop sapMBtn-emphasis"/>
             </VBox>
           </HBox>
         </HBox>

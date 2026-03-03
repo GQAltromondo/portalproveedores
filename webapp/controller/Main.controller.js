@@ -138,7 +138,10 @@ sap.ui.define([
 
 		// Navegar a la pantalla de selección de CUIT / tiles
 		onGoToTiles: function () {
-			this.navTo("TilesView");
+			this.navTo("onGoToTiles");
+				const sUrl =
+				`https://registracionusuariosprov-goio5drrj1.dispatcher.br1.hana.ondemand.com/index.html?hc_reset`;
+			window.open(sUrl, "_blank");
 		},
 
 		// Navegar a la pantalla de registro
