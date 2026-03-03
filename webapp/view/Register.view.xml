@@ -3,10 +3,10 @@
 
 			<Page class="registrationBackground" showNavButton="true" navButtonPress="onNavBack" enableScrolling="true">
 				<FlexBox class="registrationBackground fullHeight" justifyContent="Center" alignItems="Center" direction="Column"
-					height="100%">
+					height="100%" width="100%">
 					<MessageStrip id="msgStrip" visible="false" showCloseButton="true" class="sapUiSmallMarginBottom" dismissible="true" text=""
 						type="Information"/>
-					<VBox width="420px" class="sapUiMediumMargin sectionPanel">
+					<VBox width="420px" class="sectionPanel registration-form-container">
 						<HBox justifyContent="Center" class="sapUiSmallMarginBottom sapUiMediumMarginTop">
 							<Image src="img/logosacde.png" width="115px"/>
 						</HBox>
