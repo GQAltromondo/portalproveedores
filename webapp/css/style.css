@@ -1,95 +1,196 @@
-/* Enter your custom styles here */
+/* ===== ESTILOS GLOBALES MODERNOS ===== */
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body.sapUiBody {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== FONDO DE PANTALLA COMPLETA ===== */
+.loginBackground {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1b2944 0%, #2d5a7b 50%, #1b2944 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrationBackground {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1b2944 0%, #2d5a7b 50%, #1b2944 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ===== CONTENEDORES ===== */
 .sectionContainer {
-  background-color: #f2f2f2;
-  padding: 1rem;
-  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Header interno azul y header de panel */
-.sectionHeader {
-  background-image: none !important;
-  background-color: #004b8d !important;
-  color: white !important;
-}
-.white-background{
-	span{
-	background-color: #ffffff !important;}
+.sectionContainer:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
-/* Franja gris claro de los inputs */
-.sectionContent {
-  background-color: #e6e6e6;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-}
-
-/* Panel blanco con bordes redondeados */
 .sectionPanel {
-  background-color: white;
-  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ===== HEADERS ===== */
+.sectionHeader {
+  background: linear-gradient(135deg, #004b8d 0%, #006ab3 100%) !important;
+  padding: 1.25rem !important;
+  color: white !important;
+  border-image: none !important;
+  box-shadow: 0 2px 8px rgba(0, 75, 141, 0.3);
 }
 
 .sectionHeader .sapMTitle,
 .sectionHeader .sapMTitleH4,
-.sectionHeader .sapMTitleH6 {
-  color: #ffffff !important;
-}
-
-.text-white{
-	color: #ffffff !important;
-}
-.loginBackground {
-  /* Ocupa toda la pantalla */
-  min-height: 100vh;      /* aseguramos altura completa */
-  background-color: #1b2944;  /* el azul que quieras */
-  
-}
-.fragmSociedad-container{
-	background-color :#e6e6e6;
-}
-.sapMPopup-CTX .sapMIBar.sapMHeader-CTX{
-	background-color: #004b8d ;
-}
-
+.sectionHeader .sapMTitleH6,
 .sapMDialogTitle {
-	color:#fff !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.fragmSociedad-content{
-	width: 90%;
-	margin:auto;
-padding: 10px;
+/* ===== CONTENIDOS ===== */
+.sectionContent {
+  background-color: #f0f4f8;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid #004b8d;
 }
 
+/* ===== TEXTOS ===== */
+.text-white {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 
- Textos normales 
-.loginBackground .sapMText {
+.loginBackground .sapMText,
+.registrationBackground .sapMText {
   color: #ffffff !important;
 }
 
-/* Fondo azul igual que el login */
-.registrationBackground {
-  background-color: #1b2944;
+.loginBackground .sapMLabel,
+.registrationBackground .sapMLabel {
+  color: #e0e0e0 !important;
 }
 
-/* Forzamos altura de viewport */
-.fullHeight {
-  min-height: 100vh;
+/* ===== BOTONES ===== */
+.sapMBtn.sapMBtnEmphasized {
+  background: linear-gradient(135deg, #004b8d 0%, #006ab3 100%) !important;
+  border: none !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 75, 141, 0.3);
 }
 
-/* (Opcional) si quieres texto blanco dentro */
-.registrationBackground .sapMTitle,
-.registrationBackground .sapMText,
-.registrationBackground .sapMLabel,
-.registrationBackground .sapMBtn .sapMBtnContent {
- // color: #ffffff !important;
+.sapMBtn.sapMBtnEmphasized:hover {
+  box-shadow: 0 6px 16px rgba(0, 75, 141, 0.4);
+  transform: translateY(-2px);
+}
+
+.sapMBtn.sapMBtnEmphasized:active {
+  transform: translateY(0);
+}
+
+/* ===== INPUTS ===== */
+.sapMInputBase {
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+.sapMInputBase:focus,
+.sapMInputBase.sapMInputBaseFocused {
+  border-color: #004b8d !important;
+  box-shadow: 0 0 0 3px rgba(0, 75, 141, 0.1) !important;
+  background-color: #ffffff;
 }
 
 .inputErrorBackground {
-  background-color: #fdecea !important; /* rojo claro */
-  border: 1px solid #e53935 !important; /* rojo */
-  border-radius: 0.2rem;
+  background-color: #ffebee !important;
+  border: 1px solid #ef5350 !important;
+  border-radius: 8px;
+}
+
+.fragmSociedad-container {
+  background-color: #f0f4f8;
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.fragmSociedad-content {
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* ===== DIÁLOGOS ===== */
+.sapMPopup-CTX .sapMIBar.sapMHeader-CTX {
+  background: linear-gradient(135deg, #004b8d 0%, #006ab3 100%) !important;
+  color: white !important;
+}
+
+.sapMDialogTitle {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* ===== ALTURA COMPLETA ===== */
+.fullHeight {
+  height: 100%;
+  width: 100%;
+}
+
+/* ===== MESSAGE STRIP ===== */
+.sapMMessageStrip {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ESTILOS DE PÁGINA ===== */
+.sapMPage {
+  height: 100%;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sapMPageContent {
+  height: 100%;
+  width: 100%;
 }
 
 /* La caja central (VBox) sigue blanca, si quieres ajusta sombras aquí */
