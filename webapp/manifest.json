@@ -93,7 +93,7 @@
 				"viewPath": "sacde.PortalProveedores.view",
 				"controlAggregation": "pages",
 				"controlId": "app",
-				"clearControlAggregation": false
+				"clearControlAggregation": true
 			},
 			"routes": [
 				{
@@ -113,13 +113,14 @@
 				"TargetMain": {
 					"viewType": "XML",
 					"transition": "slide",
-					"clearControlAggregation": false,
+					"clearControlAggregation": true,
 					"viewId": "Main",
 					"viewName": "Main"
 				},
 				"Register": {
 					"viewName": "Register",
-					"viewType": "XML"
+					"viewType": "XML",
+					"clearControlAggregation": true
 				}
 			}
 		}
