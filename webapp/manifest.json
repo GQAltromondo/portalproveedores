@@ -98,7 +98,7 @@
 			"routes": [
 				{
 					"name": "TargetMain",
-					"pattern": "RouteMain",
+					"pattern": "",
 					"target": [
 						"TargetMain"
 					]
@@ -114,8 +114,7 @@
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": true,
-					"viewId": "Main",
-					"viewName": "Main"
+					"viewName": "Home"
 				},
 				"Register": {
 					"viewName": "Register",

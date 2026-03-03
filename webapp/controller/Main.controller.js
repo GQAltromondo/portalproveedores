@@ -9,25 +9,6 @@ sap.ui.define([
 
 	return BaseController.extend("sacde.PortalProveedores.controller.Main", {
 		onInit: function () {
-			// Guarda una referencia al handler enlazado para poder hacer detach luego
-			this._fnRouteMatched = this._onRouteMatched.bind(this);
-
-			// Evita doble attach si el controlador se re-instancia
-			if (!this._routeAttached) {
-				this.getRouter().getRoute("TargetMain").attachPatternMatched(this._fnRouteMatched);
-				this._routeAttached = true;
-			}
-		},
-
-		onExit: function () {
-			if (this._fnRouteMatched) {
-				this.getRouter().getRoute("Main").detachPatternMatched(this._fnRouteMatched);
-				this._routeAttached = false;
-			}
-		},
-
-		_onRouteMatched: function () {
-			this.refresh();
 		},
 
 		refresh: async function () {

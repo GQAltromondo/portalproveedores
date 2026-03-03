@@ -1,34 +1,4 @@
 
 <mvc:View controllerName="sacde.PortalProveedores.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
-		<App id="app">
-			<Page id="page" class="loginBackground" showNavButton="false" enableScrolling="false">
-				<content>
-					<VBox width="100%" height="100%" justifyContent="Center" alignItems="Center">
-						<!-- Logo Section -->
-						<VBox alignItems="Center" justifyContent="Center" class="sapUiLargeMarginBottom">
-							<Image src="img/logosacde.png" width="150px"/>
-						</VBox>
-
-						<!-- Main Content Section -->
-						<HBox width="85%" justifyContent="Center" alignItems="Start" class="sapUiMediumMarginTop">
-							<!-- Left section: Portal de Proveedores -->
-							<VBox width="40%" alignItems="Center" justifyContent="Start" class="sapUiMediumMarginEnd">
-								<Title text="PORTAL DE PROVEEDORES" level="H2" class="text-white" textAlign="Center" width="100%"/>
-								<Text text="Accede a tu cuenta de proveedor para gestionar tus productos y servicios" class="text-white sapUiMediumMarginTop" textAlign="Center" width="100%"/>
-								<Button text="Acceder al Portal" type="Emphasized" press="onGoToTiles" width="180px" class="sapUiMediumMarginTop button-primary"/>
-							</VBox>
-
-							<!-- Right section: Registro de Proveedores -->
-							<VBox width="40%" alignItems="Center" justifyContent="Start" class="sapUiMediumMarginStart">
-								<Title text="REGISTRACIÓN DE PROVEEDORES" level="H2" class="text-white" textAlign="Center" width="100%"/>
-								<Text text="¿Eres nuevo? Registrate como proveedor y comienza a colaborar" class="text-white sapUiMediumMarginTop" textAlign="Center" width="100%"/>
-								<Button text="Ir a Registrarse" type="Emphasized" press="onGoToRegister" width="180px" class="sapUiMediumMarginTop button-primary"/>
-							</VBox>
-						</HBox>
-					</VBox>
-				</content>
-			</Page>
-		</App>
-	</Shell>
+	<App id="app"/>
 </mvc:View>

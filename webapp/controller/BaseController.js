@@ -57,7 +57,7 @@ sap.ui.define([
 			var oHistory = History.getInstance();
 			var sPreviousHash = oHistory.getPreviousHash();
 
-			if (sPreviousHash !== undefined) {
+			if (sPreviousHash !== undefined && sPreviousHash !== "") {
 				window.history.go(-1);
 			} else {
 				this.getRouter().navTo("TargetMain", {}, true);
