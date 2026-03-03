@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core" displayBlock="true">
 
 			<Page class="registrationBackground" showNavButton="true" navButtonPress="onNavBack" enableScrolling="true">
-				<FlexBox class="registrationBackground fullHeight sapUiSmallMargin" justifyContent="Center" alignItems="Center" direction="Column"
+				<FlexBox class="registrationBackground fullHeight" justifyContent="Center" alignItems="Center" direction="Column"
 					height="100%">
 					<MessageStrip id="msgStrip" visible="false" showCloseButton="true" class="sapUiSmallMarginBottom" dismissible="true" text=""
 						type="Information"/>
