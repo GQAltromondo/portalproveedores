@@ -134,12 +134,6 @@ body.sapUiBody {
   width: 100% !important;
   max-width: 200px !important;
 }
-  transform: translateY(-2px);
-}
-
-.sapMBtn.sapMBtnEmphasized:active {
-  transform: translateY(0);
-}
 
 /* ===== INPUTS ===== */
 .sapMInputBase {
