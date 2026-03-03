@@ -1,10 +1,13 @@
 
 <mvc:View controllerName="sacde.PortalProveedores.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
+	
  <App id="app">
     <Page id="page" class="loginBackground" showNavButton="false" enableScrolling="false">
       <content>
-        <HBox width="100%" justifyContent="Center" alignItems="Center" height="100%">
+        <VBox width="100%" height="100%" justifyContent="Center" alignItems="Center">
+          <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMarginBottom">
+            <Image src="img/logosacde.png" width="150px" class="sapUiMediumMarginBottom"/>
+          </VBox>
           <HBox width="80%" justifyContent="SpaceBetween" alignItems="Center">
             <!-- Left section: Portal de Proveedores -->
             <VBox width="45%" alignItems="Start" justifyContent="Center">
@@ -20,10 +23,10 @@
               <Button text="Ir a Registrarse" type="Emphasized" press="onGoToRegister" class="sapUiSmallMarginTop sapMBtn-emphasis"/>
             </VBox>
           </HBox>
-        </HBox>
+        </VBox>
       </content>
     </Page>
   </App>
-	</Shell>
+
 
 </mvc:View>
