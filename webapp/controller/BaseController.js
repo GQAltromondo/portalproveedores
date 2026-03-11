@@ -12,6 +12,7 @@ sap.ui.define([
 		 * Obtiene el router de la aplicación
 		 * @returns {sap.ui.core.routing.Router} Router de la aplicación
 		 */
+		 
 		getRouter: function () {
 			return UIComponent.getRouterFor(this);
 		},
