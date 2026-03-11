@@ -202,18 +202,36 @@ sap.ui.define([
 				return;
 			}
 
+			this.showBusy();
+
+			// 1. Verificar si el usuario ya existe en IAS
+			let bExists = false;
+			try {
+				bExists = await IASHelper.userExists(oUser.email);
+			} catch (e) {
+				this.hideBusy();
+				MessageBox.error("No se pudo verificar el usuario en el sistema de autenticación. Intente nuevamente.");
+				return;
+			}
+
+			if (bExists) {
+				this.hideBusy();
+				MessageBox.information(
+					"Este usuario ya está registrado. Ingrese directamente al portal de proveedores.",
+					{ title: "Usuario existente" }
+				);
+				return;
+			}
+
+			// 2. Crear registro en ApplicationLoginSet (sin contraseña en DB)
 			const sEntitySet = "/ApplicationLoginSet";
 			const oModel = oView.getModel("oData");
-
-			// Payload para DB: contrasena vacía (login solo vía IAS, clave solo en IAS)
 			const oUserDb = jQuery.extend({}, oUser);
 			oUserDb.contrasena = "";
 
-			this.showBusy();
-
 			oModel.create(sEntitySet, oUserDb, {
 				success: async () => {
-					// Crear usuario en IAS con contraseña (no se envía email de cambio - configurar en IAS)
+					// 3. Crear usuario en IAS solo si el registro en DB fue exitoso
 					try {
 						await IASHelper.createUser({
 							email: oUser.email,
@@ -223,9 +241,12 @@ sap.ui.define([
 							cuit: oUser.cuit
 						}, true); // true = es admin
 					} catch (e) {
-						// IASHelper ya muestra el error
+						// El registro en DB fue exitoso pero IAS falló
+						this.hideBusy();
+						MessageBox.error("El registro fue creado pero no se pudo crear el usuario en el sistema de autenticación: " + (e.message || e));
+						return;
 					}
-					
+
 					this.hideBusy();
 					MessageToast.show("Registro creado exitosamente.");
 					this.navTo("Login");
@@ -233,6 +254,9 @@ sap.ui.define([
 				error: (oError) => {
 					this.hideBusy();
 					const sMsg = this.parseError(oError, "Error al crear el registro.");
+					// Marcar campo CUIT como editable/error para que el usuario pueda corregirlo
+					oView.byId("inputCUIT").setValueState("Error");
+					oView.byId("inputCUIT").setValueStateText(sMsg);
 					MessageBox.error(sMsg);
 				}
 			});

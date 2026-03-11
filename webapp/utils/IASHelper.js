@@ -209,6 +209,35 @@ sap.ui.define([
 		},
 
 		/**
+		 * Verifica si un usuario existe en IAS por email
+		 * @param {string} sEmail - Email del usuario
+		 * @returns {Promise<boolean>} True si el usuario existe
+		 */
+		userExists: async function (sEmail) {
+			try {
+				var sToken = await this.getToken();
+				var sGetUrl = SCIM_BASE + '?filter=emails eq "' + sEmail + '"';
+
+				var oResult = await new Promise(function (resolve, reject) {
+					jQuery.ajax({
+						url: sGetUrl,
+						method: "GET",
+						headers: {
+							"Authorization": "Bearer " + sToken
+						},
+						success: resolve,
+						error: reject
+					});
+				});
+
+				return !!(oResult.Resources && oResult.Resources.length > 0);
+			} catch (err) {
+				jQuery.sap.log.error("Error al verificar usuario en IAS:", err);
+				throw err;
+			}
+		},
+
+		/**
 		 * Actualiza la contraseña de un usuario en IAS
 		 * @param {string} sUserId - ID del usuario en IAS
 		 * @param {string} sNewPassword - Nueva contraseña
